@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	<title>Seatwork #2</title>
+	<style>
+		body {
+			background-color: slategray;
+			font-family: Cambria Math;
+		}
+		h1 {
+			text-align: center;
+			padding-top: 20px;
+			color: whitesmoke;
+		}
+		h3 {
+			padding-top: 7px;
+			color: whitesmoke;
+		}
+		input {
+			padding: 5px;
+		}
+		p {
+			margin: 0px;
+			color: whitesmoke;
+		}
+		i {
+			color: whitesmoke;
+		}
+	</style>
+</head>
+<body>
+	<h1>Math-Bot</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6" style="border: whitesmoke 3px dashed;">
+				<h3>Hello there! I am <span class="text-warning">Math-Bot</span>, a specialist in multiplication and division!</h3>
+				<h3>Given:</h3>
+				<p>Enter a value for x:</p>
+				<input type="text" placeholder="..." id="id1" class="bg-secondary text-light rounded" style="width: 500px; border: darkgray 1px solid;">
+				<br><br>
+				<p>Enter an value for y:</p>
+				<input type="text" placeholder="..." id="id2" class="bg-secondary text-light rounded" style="width: 500px; border: darkgray 1px solid;">
+				<br><br><br>
+				<input type="submit" value="x multiplied to y" onclick="multiply()" style="width: 250px; margin-bottom: 5px;" class="btn btn-success">
+				<input type="submit" value="x divided by y" onclick="divide()" style="width: 250px; margin-bottom: 5px;" class="btn btn-warning">
+				<br>
+				<input type="submit" value="x raised to y" onclick="exponent()" style="width: 250px;" class="btn btn-danger">
+				<input type="submit" value="x mod y*" onclick="remainder()" style="width: 250px;" class="btn btn-info">
+				<br><br><br>
+				<script>
+					function multiply() {
+						num1 = document.getElementById("id1").value;
+						num2 = document.getElementById("id2").value;
+						product = num1 * num2;
+							window.alert(product);
+					}
+					function divide() {
+						num1 = document.getElementById("id1").value;
+						num2 = document.getElementById("id2").value;
+						quotient = num1 / num2;
+							window.alert(quotient);
+					}
+					function exponent() {
+						num1 = document.getElementById("id1").value;
+						num2 = document.getElementById("id2").value;
+						difference = num1 ** num2;
+							window.alert(difference);
+					}
+					function remainder() {
+						num1 = Number(document.getElementById("id1").value);
+						num2 = Number(document.getElementById("id2").value);
+						sum = num1 % num2;
+							window.alert(sum);
+					}
+				</script>
+				<i>*mod means get the remainder</i>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+</body>
+</html>
